@@ -1,0 +1,7 @@
+<form (submit)="addPost()">
+  <input type="text" name="title" [(ngModel)]="uniqPost.title">
+  <textarea name="content" [(ngModel)]="uniqPost.content"></textarea>
+  <button type="submit">Ajouter</button>
+</form>
+
+{{uniqPost | json}}
