@@ -6,16 +6,14 @@ Import des composants de la route
     const router = express.Router();
 //
 
-
 /*
 Définition des routes
 */
 // Page Home
-    router.get('/', (req, res) => { // => Capter l'appel sur la page d'accueil
+    router.get('/*', (req, res) => { // => Capter l'appel sur la page d'accueil
     res.render('index'); // => Renvoyer la vue "index.html"
     });
 //
-
 
 /*
 Export de la route

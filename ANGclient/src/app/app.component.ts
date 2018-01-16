@@ -3,7 +3,17 @@ import { PostService } from './services/post.service'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <app-header></app-header>
+    
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+    <app-footer></app-footer>
+
+
+  `,
   providers: [ PostService ]
 })
 
@@ -13,6 +23,7 @@ export class AppComponent {
   public uniqPost = { title: null, content: null }
   
   public addPost(){
+    
     this.postService.addPost( this.uniqPost ).then( data =>{
       console.log(data);
 
