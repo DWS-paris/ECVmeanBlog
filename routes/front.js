@@ -11,7 +11,7 @@ Définition des routes
 */
 // Page Home
     router.get('/*', (req, res) => { // => Capter l'appel sur la page d'accueil
-    res.render('index'); // => Renvoyer la vue "index.html"
+        res.render('index'); // => Renvoyer la vue "index"
     });
 //
 
